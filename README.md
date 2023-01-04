@@ -1,1 +1,2 @@
 # wafflebot
+My Discord Bot
