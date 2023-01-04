@@ -1,0 +1,25 @@
+{
+  "name": "wafflebot",
+  "version": "1.0.0",
+  "description": "My Discord Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/W4ff1e/wafflebot.git"
+  },
+  "author": "W4ff1e",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/W4ff1e/wafflebot/issues"
+  },
+  "homepage": "https://github.com/W4ff1e/wafflebot#readme",
+  "dependencies": {
+    "discord.js": "^14.7.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.31.0"
+  }
+}
