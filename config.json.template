@@ -1,6 +1,7 @@
 {
     "token": "your-token-goes-here",
     "clientid": "your-client-id-goes-here",
-    "developmentServerInvite": "your-server-invite-goes-here",
-    "developmentServerName": "your-server-name=goes-here"
+    "guildId": "your-development-server-id-goes-here",
+    "developmentGuildInvite": "your-server-invite-goes-here",
+    "developmentGuildName": "your-server-name=goes-here"
 }

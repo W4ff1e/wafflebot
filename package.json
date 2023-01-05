@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/W4ff1e/wafflebot#readme",
   "dependencies": {
-    "discord.js": "^14.7.1"
+    "discord.js": "^14.7.1",
+    "package.json": "^2.0.1"
   },
   "devDependencies": {
     "eslint": "^8.31.0"
