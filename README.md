@@ -14,6 +14,10 @@
 
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/w4ff1e/wafflebot) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/W4ff1e/wafflebot) ![GitHub issues](https://img.shields.io/github/issues/w4ff1e/wafflebot) ![GitHub package.json version](https://img.shields.io/github/package-json/v/w4ff1e/wafflebot)
 
+### Support Discord:
+
+![Discord Banner 2](https://discordapp.com/api/guilds/298164747428298757/widget.png?style=banner2)
+
 ------------
 
 
