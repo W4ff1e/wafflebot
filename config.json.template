@@ -3,5 +3,6 @@
     "clientId": "your-client-id-goes-here",
     "guildId": "your-development-server-id-goes-here",
     "developmentGuildInvite": "your-server-invite-goes-here",
-    "developmentGuildName": "your-server-name=goes-here"
+    "developmentGuildName": "your-server-name=goes-here",
+    "commandHelpWiki": "https://github.com/W4ff1e/wafflebot/wiki/Command-Help"
 }
