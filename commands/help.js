@@ -8,7 +8,8 @@ module.exports = {
     async execute(interaction) {
         // interaction.user is the object representing the User who ran the command
         // interaction.member is the GuildMember object, which represents the user in the specific guild
-        await interaction.reply(`[Here is the link to the Github Wiki for commands](${commandHelpWiki})`);
+        await interaction.reply({ content: `[Here is the link to the Github Wiki for commands](${commandHelpWiki})`, ephemeral: true });
+
     },
 };
 
