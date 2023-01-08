@@ -3,3 +3,8 @@ https://nodejs.org/en/
 
 Following the starter guide from here:
 https://discordjs.guide/preparations/#installing-node-js
+
+
+
+TODO:
+    https://www.npmjs.com/package/@discordjs/voice
