@@ -1,13 +1,26 @@
-// Require Dependencies
-
 // Command Intialization
 const fs = require('node:fs');
 const path = require('node:path');
-const { Client, Collection, Events, GatewayIntentBits, ActivityType } = require('discord.js');
+const { Client, Collection, GatewayIntentBits } = require('discord.js');
 const { token } = require('./config.json');
 
 // Initialize the Client
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+
+// Initialize events in a dynamic array
+const eventsPath = path.join(__dirname, 'events');
+const eventFiles = fs.readdirSync(eventsPath).filter(file => file.endsWith('.js'));
+
+
+for (const file of eventFiles) {
+    const filePath = path.join(eventsPath, file);
+    const event = require(filePath);
+    if (event.once) {
+        client.once(event.name, (...args) => event.execute(...args));
+    } else {
+        client.on(event.name, (...args) => event.execute(...args));
+    }
+}
 
 // More Command Intialization
 client.commands = new Collection();
@@ -26,38 +39,5 @@ for (const file of commandFiles) {
     }
 }
 
-
-// When the client is ready, run this code (Once)
-// We use 'c' for the event parameter to keep it separate from the already defined 'client'
-client.once(Events.ClientReady, c => {
-    console.log(`Ready! Logged in as ${c.user.tag}`);
-    // Set the client user's presence
-    client.user.setPresence({ activities: [{ name: 'commands! /help', type: ActivityType.Listening }], status: 'Online' });
-    console.log('Setting presence.');
-});
-
 // Log in to Discord with your client's token
 client.login(token);
-
-
-
-// Command Listener
-client.on(Events.InteractionCreate, async interaction => {
-    if (!interaction.isChatInputCommand()) return;
-
-    const command = interaction.client.commands.get(interaction.commandName);
-
-    if (!command) {
-        console.error(`No command matching ${interaction.commandName} was found.`);
-        return;
-    }
-
-    try {
-        await command.execute(interaction);
-        // Log the command executed and the user who initiated
-        console.log(`${interaction.user.username} executed: ${interaction}`);
-    } catch (error) {
-        console.error(error);
-        await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
-    }
-});

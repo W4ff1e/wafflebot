@@ -1,6 +1,10 @@
 #secrets file
 config.json
 
+#Workspace Specifics
+.vscode
+wafflebot.code-workspace
+
 # Logs
 logs
 *.log
