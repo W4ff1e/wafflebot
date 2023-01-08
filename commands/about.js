@@ -11,4 +11,3 @@ module.exports = {
         await interaction.reply(`I was made by [BLD] Waffle#1816 and licensed under Apache-2.0 for public use!\nYou can get help and send suggestions in our development/support server found [here](${developmentGuildInvite})`);
     },
 };
-
