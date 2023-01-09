@@ -8,3 +8,7 @@ https://discordjs.guide/preparations/#installing-node-js
 
 TODO:
     https://www.npmjs.com/package/@discordjs/voice
+    https://github.com/dipu-bd/lightnovel-crawler#discord
+    Add a .json with all premium users
+    create command for adding premium users
+    Add watchlists with a DB

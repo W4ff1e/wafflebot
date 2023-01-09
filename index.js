@@ -11,6 +11,24 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 const eventsPath = path.join(__dirname, 'events');
 const eventFiles = fs.readdirSync(eventsPath).filter(file => file.endsWith('.js'));
 
+const exists = function(filepath) {
+    try {
+        fs.access(filepath);
+        return true;
+    } catch {
+        return false;
+    }
+};
+
+if (exists('config.json')) {
+    fs.copyFile('config.json.template', 'config.json', (err) => {
+        if (err) {
+            console.log(err);
+        }
+    });
+    console.log('Created config file. Please edit and add your information.');
+}
+
 
 for (const file of eventFiles) {
     const filePath = path.join(eventsPath, file);
