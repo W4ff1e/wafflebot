@@ -5,6 +5,6 @@
     "developmentGuildInvite": "your-server-invite-goes-here",
     "developmentGuildName": "your-server-name=goes-here",
     "commandHelpWiki": "https://github.com/W4ff1e/wafflebot/wiki/Command-Help",
-    "botOwnerId": your-id-here
+    "botOwnerId": "your-id-here"
 
 }
