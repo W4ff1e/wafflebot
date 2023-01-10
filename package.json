@@ -1,6 +1,6 @@
 {
   "name": "waffle-bot",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Waffle Bot discord novel bot.",
   "main": "index.js",
   "scripts": {
