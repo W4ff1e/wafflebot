@@ -4,6 +4,7 @@ config.json
 #Workspace Specifics
 .vscode
 wafflebot.code-workspace
+target/
 
 # Logs
 logs
