@@ -7,8 +7,7 @@ const wait = require('node:timers/promises').setTimeout;
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('about')
-        .setDescription('Provides information about the bot.')
-        .addUserOption(),
+        .setDescription('Provides information about the bot.'),
     async execute(interaction) {
         // This is needed for a command that takes longer than 3 seconds to run and it triggers the "Application is thinking..." message.
         await interaction.deferReply();

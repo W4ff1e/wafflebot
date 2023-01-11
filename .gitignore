@@ -5,6 +5,7 @@ config.json
 .vscode
 wafflebot.code-workspace
 target/
+novels/
 
 # Logs
 logs
