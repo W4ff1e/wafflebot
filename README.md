@@ -18,6 +18,8 @@
 
 ![Discord Banner 2](https://discordapp.com/api/guilds/298164747428298757/widget.png?style=banner2)
 
+### Credit to https://github.com/dipu-bd/lightnovel-crawler for the binary I am using for the novel search functions
+
 ------------
 
 
