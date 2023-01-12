@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/W4ff1e/wafflebot#readme",
   "dependencies": {
+    "@expo/spawn-async": "^1.7.0",
     "await-exec": "^0.1.2",
     "discord.js": "^14.7.1"
   },

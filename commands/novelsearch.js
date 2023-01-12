@@ -1,16 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, AttachmentBuilder } = require('discord.js');
 const { developmentGuildInvite } = require('../config.json');
-const { exec } = require('child_process');
-function execute(fileName) {
-    const promise = new Promise((resolve, reject) => {
-        exec(fileName, (err, data) => {
-            if (err) reject(err);
-            else console.log(data);
-        });
-
-    });
-    return promise;
-}
+const { spawnAsync } = require('@expo/spawn-async');
 // Needed for the wait function
 // const wait = require('node:timers/promises').setTimeout;
 
@@ -34,7 +24,16 @@ module.exports = {
         await interaction.reply(`Searching for: "**${novelTitle}**"...\n*This could take up to 5 minutes.*`);
 
         console.log('Beginning Search...');
-        await execute(`lncrawl.exe -q "${novelTitle}" --first 1 --add-source-url -o ./novels/temp --format PDF --auto-proxy --filename-only --filename novelresult --close-directly --suppress`);
+        const novelSearchShell = spawnAsync('lncrawl.exe', ['-q', `${novelTitle}`, '--first', '1', '--add-source-url', '--output', './novels/temp', '--format', 'PDF', '--auto-proxy', '--filename-only', '--filename', 'novelresult', '--close-directly', '--suppress']);
+        const childProcess = novelSearchShell.child;
+        childProcess.stdout.on('data', (data) => {
+            console.log(`novelSearchShell stdout: ${data}`);
+        });
+        childProcess.stderr.on('data', (data) => {
+            console.error(`novelSearchShell stderr: ${data}`);
+        });
+        await novelSearchShell;
+        // await execute(`lncrawl.exe -q "${novelTitle}" --first 1 --add-source-url -o ./novels/temp --format PDF --auto-proxy --filename-only --filename novelresult --close-directly --suppress`);
 
         const novelEmbed = new EmbedBuilder()
             .setAuthor({ name: `${interaction.client.user.username}`, url: `${developmentGuildInvite}`, iconURL: `${interaction.client.user.avatarURL()}` })
