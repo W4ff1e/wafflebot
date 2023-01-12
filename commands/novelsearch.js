@@ -1,6 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, AttachmentBuilder } = require('discord.js');
 const { developmentGuildInvite } = require('../config.json');
-const { spawnAsync } = require('@expo/spawn-async');
+const spawnAsync = require('@expo/spawn-async');
 // Needed for the wait function
 // const wait = require('node:timers/promises').setTimeout;
 
