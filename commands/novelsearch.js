@@ -24,7 +24,7 @@ module.exports = {
         await interaction.reply(`Searching for: "**${novelTitle}**"...\n*This could take up to 5 minutes.*`);
 
         console.log('Beginning Search...');
-        const novelSearchShell = spawnAsync('lncrawl.exe', ['-q', `${novelTitle}`, '--first', '1', '--add-source-url', '--output', './novels/temp', '--format', 'PDF', '--auto-proxy', '--filename-only', '--filename', 'novelresult', '--close-directly', '--suppress']);
+        const novelSearchShell = spawnAsync('lncrawl.exe', ['-q', `${novelTitle}`, '-x', 'allnovel|novelfull|lightnovelpub', '--first', '1', '--add-source-url', '--output', './novels/temp', '--format', 'PDF', '--auto-proxy', '--filename-only', '--filename', 'novelresult', '--close-directly', '--suppress']);
         const childProcess = novelSearchShell.child;
         childProcess.stdout.on('data', (data) => {
             console.log(`novelSearchShell stdout: ${data}`);
