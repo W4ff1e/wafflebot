@@ -1,9 +1,18 @@
 const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, AttachmentBuilder } = require('discord.js');
 const { developmentGuildInvite } = require('../config.json');
 const { exec } = require('child_process');
+function execute(fileName) {
+    const promise = new Promise((resolve, reject) => {
+        exec(fileName, (err, data) => {
+            if (err) reject(err);
+            else console.log(data);
+        });
 
+    });
+    return promise;
+}
 // Needed for the wait function
-const wait = require('node:timers/promises').setTimeout;
+// const wait = require('node:timers/promises').setTimeout;
 
 
 module.exports = {
@@ -22,15 +31,10 @@ module.exports = {
         if (!novelTitle) return interaction.channel.send('You must provide a title to search!');
         if (novelTitle.length > 100) return interaction.channel.send('The novel title cannot exceed 100 characters');
 
-        await interaction.reply(`Searching for: "${novelTitle}"...`);
+        await interaction.reply(`Searching for: "**${novelTitle}**"...\n*This could take up to 5 minutes.*`);
 
-        exec(`lncrawl.exe -q "${novelTitle}" --first 1 --add-source-url -o ./novels/temp --format PDF --auto-proxy -o /novels/temp --filename-only --filename novelresult --close-directly --suppress`, function(err, stdout) {
-            console.log(err);
-            console.log(stdout);
-        });
-
-        // REMOVE ASAP
-        wait(300000);
+        console.log('Beginning Search...');
+        await execute(`lncrawl.exe -q "${novelTitle}" --first 1 --add-source-url -o ./novels/temp --format PDF --auto-proxy --filename-only --filename novelresult --close-directly --suppress`);
 
         const novelEmbed = new EmbedBuilder()
             .setAuthor({ name: `${interaction.client.user.username}`, url: `${developmentGuildInvite}`, iconURL: `${interaction.client.user.avatarURL()}` })
@@ -45,7 +49,7 @@ module.exports = {
         const novelPDF = new AttachmentBuilder()
             .setFile('./novels/temp/pdf/novelresult.pdf')
             // .setDescription('This is the first chapter of')
-            .setName(`${novelTitle}`);
+            .setName(`${novelTitle}.pdf`);
 
         const row = new ActionRowBuilder()
             .addComponents(
