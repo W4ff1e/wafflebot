@@ -22,7 +22,8 @@
   "dependencies": {
     "@expo/spawn-async": "^1.7.0",
     "await-exec": "^0.1.2",
-    "discord.js": "^14.7.1"
+    "discord.js": "^14.7.1",
+    "fs-extra": "^11.1.0"
   },
   "devDependencies": {
     "eslint": "^8.31.0"
