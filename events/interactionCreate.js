@@ -16,7 +16,7 @@ module.exports = {
         }
 
         try {
-            await console.log(`Executing: ${interaction}`);
+            console.log(`Executing: ${interaction}`);
             await command.execute(interaction);
             // Log the command executed and the user who initiated
             await clearLastLines(1);

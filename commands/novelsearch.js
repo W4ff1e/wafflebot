@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, AttachmentBuilder } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, AttachmentBuilder, Events } = require('discord.js');
 const { developmentGuildInvite } = require('../config.json');
 const fs = require('fs-extra');
 // const { readFile } = require('fs/promises');
@@ -74,5 +74,9 @@ module.exports = {
             files: [novelPDF],
         });
 
+        interaction.client.on(Events.InteractionCreate, interaction => {
+            if (!interaction.isButton()) return;
+            console.log(interaction);
+        });
     },
 };
