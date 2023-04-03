@@ -19,7 +19,7 @@
   "homepage": "https://github.com/W4ff1e/wafflebot#readme",
   "dependencies": {
     "await-exec": "^0.1.2",
-    "discord.js": "^14.7.1"
+    "discord.js": "^14.9.0"
   },
   "devDependencies": {
     "eslint": "^8.31.0"
