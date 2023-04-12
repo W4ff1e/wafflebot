@@ -27,15 +27,15 @@ module.exports = {
         await interaction.reply(`Searching for: "**${novelTitle}**"...\n*This could take up to 5 minutes.*`);
 
         console.log('Beginning Search...');
-        const novelSearchShell = spawnAsync('lncrawl.exe', ['-q', `${novelTitle}`, '-x', 'allnovel|novelfull', '--first', '1', '--add-source-url', '--output', './novels/temp', '--format', 'PDF', '--auto-proxy', '--filename-only', '--filename', 'novelresult', '--close-directly', '--suppress']);
-        const childProcess = novelSearchShell.child;
-        childProcess.stdout.on('data', (data) => {
-            console.log(`novelSearchShell stdout: ${data}`);
-        });
-        childProcess.stderr.on('data', (data) => {
-            console.error(`novelSearchShell stderr: ${data}`);
-        });
-        // await novelSearchShell;
+        const novelSearchShell = spawnAsync('lncrawl.exe', ['-q', `${novelTitle}`, '-x', 'lightnovelpub|novelfull', '--first', '1', '--add-source-url', '--output', './novels/temp', '--force', '--format', 'PDF', '--filename-only', '--filename', 'novelresult', '--close-directly', '--suppress']);
+        // const childProcess = novelSearchShell.child;
+        // childProcess.stdout.on('data', (data) => {
+        //     console.log(`novelSearchShell stdout: ${data}`);
+        // });
+        // childProcess.stderr.on('data', (data) => {
+        //     console.error(`novelSearchShell stderr: ${data}`);
+        // });
+        await novelSearchShell;
         // await execute(`lncrawl.exe -q "${novelTitle}" --first 1 --add-source-url -o ./novels/temp --format PDF --auto-proxy --filename-only --filename novelresult --close-directly --suppress`);
 
         const novelMetadata = await fs.readJson('./novels/temp/meta.json');
@@ -74,9 +74,9 @@ module.exports = {
             files: [novelPDF],
         });
 
-        interaction.client.on(Events.InteractionCreate, interaction => {
-            if (!interaction.isButton()) return;
-            console.log(interaction);
-        });
+        // interaction.client.on(Events.InteractionCreate, interaction => {
+        //     if (!interaction.isButton()) return;
+        //     console.log(interaction);
+        // });
     },
 };
