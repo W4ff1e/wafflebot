@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-Only the latest version on GitHub are supported for vulnerability reporting and patching.
+Only the latest version on GitHub Main Branch are supported for vulnerability reporting and patching.
 
 | Version | Supported          |
 | ------- | ------------------ |
