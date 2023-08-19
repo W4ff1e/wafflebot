@@ -1,5 +1,6 @@
 #secrets file
 config.json
+config.env
 
 #Workspace Specifics
 .vscode

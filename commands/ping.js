@@ -1,5 +1,6 @@
 const { SlashCommandBuilder } = require('discord.js');
 const { botOwnerId } = require('../config.json');
+
 // Needed for the wait function
 const wait = require('node:timers/promises').setTimeout;
 

@@ -38,6 +38,16 @@ Dev Build: ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/w
 
 ------------
 
+# How to run?
+
+1. Download and install Docker
+2. Copy the config.json.template & rename it to config.json
+3. Enter all your information in the config.json File
+4. Start the container as follows:
+```
+docker run --mount type=bind,source={ABSOLUTE PATH TO CONFIG}\config.json,target=/app/config.json w4ff1e/wafflebot:latest
+```
+
 
 # [ProjectWaffle.net](https://ProjectWaffle.net "ProjectWaffle.net")
 - [ ] User Accounts

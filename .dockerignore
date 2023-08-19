@@ -1,5 +1,12 @@
 #secrets file
 config.json
+config.env
+
+#Development Artifacts
+.eslintrc.json
+config.json.template
+TODO.md
+
 
 #Workspace Specifics
 .vscode

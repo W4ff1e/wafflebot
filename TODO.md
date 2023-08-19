@@ -7,6 +7,7 @@ My Discord Bot :)
 - [ ] Look at https://www.npmjs.com/package/@discordjs/voice
 - [ ] Implement https://github.com/dipu-bd/lightnovel-crawler
     - [ ] Limit non-premium users to 1 watched novel and 10 chapters per hour to prevent rate limiting and save resources. (May not implement)
+- [ ] Docker Environment Variables for tokens, instead of passing a bind mount to a config.json file.
 ### Completed Stuff ✓
 - [x] Basic Command Handling
 
