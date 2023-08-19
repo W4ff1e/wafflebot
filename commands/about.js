@@ -8,6 +8,6 @@ module.exports = {
     async execute(interaction) {
         // interaction.user is the object representing the User who ran the command
         // interaction.member is the GuildMember object, which represents the user in the specific guild
-        await interaction.reply(`I was made by [BLD] Waffle#1816 and licensed under Apache-2.0 for public use!\nYou can get help and send suggestions in our development/support server found [here](${developmentGuildInvite})`);
+        await interaction.reply(`I was made by @w4ff1e and licensed under Apache-2.0 for public use!\nYou can get help and send suggestions in our development/support server found [here](${developmentGuildInvite})`);
     },
 };
