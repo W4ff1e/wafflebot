@@ -8,6 +8,4 @@ RUN npm install
 
 COPY . .
 
-ENV token _
-
 CMD [ "npm", "start"]
