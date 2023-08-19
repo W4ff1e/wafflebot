@@ -19,16 +19,17 @@
 
 #### Versions:
 
-Main: ![GitHub package.json version](https://img.shields.io/github/package-json/v/w4ff1e/wafflebot/main) 
-Development: ![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/w4ff1e/wafflebot/development)
-### Docker Stats:
+Main: ![GitHub package.json version](https://img.shields.io/github/package-json/v/w4ff1e/wafflebot/main)   
+Development: ![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/w4ff1e/wafflebot/development)   
+### Docker Stats:   
 
-![Docker Pulls](https://img.shields.io/docker/pulls/w4ff1e/wafflebot)
-![Docker Stars](https://img.shields.io/docker/stars/w4ff1e/wafflebot)
+![Docker Pulls](https://img.shields.io/docker/pulls/w4ff1e/wafflebot)   
+
+![Docker Stars](https://img.shields.io/docker/stars/w4ff1e/wafflebot)   
 
 #### Size
-Latest Build: ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/w4ff1e/wafflebot/latest)
-Dev Build: ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/w4ff1e/wafflebot/development)
+Latest Build: ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/w4ff1e/wafflebot/latest)   
+Dev Build: ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/w4ff1e/wafflebot/development)   
 ### Support Discord:
 
 ![Discord Banner 2](https://discordapp.com/api/guilds/298164747428298757/widget.png?style=banner2)
