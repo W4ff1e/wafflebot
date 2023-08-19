@@ -12,8 +12,23 @@
 	- [ ] Random Novelfull Novel
 	- [ ] Pull a Specific Chapter
 
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/w4ff1e/wafflebot) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/W4ff1e/wafflebot) ![GitHub issues](https://img.shields.io/github/issues/w4ff1e/wafflebot) ![GitHub package.json version](https://img.shields.io/github/package-json/v/w4ff1e/wafflebot)
+## Info
 
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/w4ff1e/wafflebot) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/W4ff1e/wafflebot) ![GitHub issues](https://img.shields.io/github/issues/w4ff1e/wafflebot) ![GitHub Repo stars](https://img.shields.io/github/stars/w4ff1e/wafflebot) ![GitHub](https://img.shields.io/github/license/w4ff1e/wafflebot)
+
+
+#### Versions:
+
+Main: ![GitHub package.json version](https://img.shields.io/github/package-json/v/w4ff1e/wafflebot/main) 
+Development: ![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/w4ff1e/wafflebot/development)
+### Docker Stats:
+
+![Docker Pulls](https://img.shields.io/docker/pulls/w4ff1e/wafflebot)
+![Docker Stars](https://img.shields.io/docker/stars/w4ff1e/wafflebot)
+
+#### Size
+Latest Build: ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/w4ff1e/wafflebot/latest)
+Dev Build: ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/w4ff1e/wafflebot/development)
 ### Support Discord:
 
 ![Discord Banner 2](https://discordapp.com/api/guilds/298164747428298757/widget.png?style=banner2)
@@ -41,6 +56,8 @@
 - [ ] Suggestions
 	- [ ] Text-to-Speech
 	- [ ] Support for PDF Material
+
+
 
 ###### Made with :yellow_heart: by Waffle using [editor.md](https://pandao.github.io/editor.md/en.html "editor.md") & [shields.io](https://shields.io "shields.io")
  
