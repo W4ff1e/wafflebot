@@ -42,9 +42,14 @@ const checkEnvVar = function(envVar, jsonVar) {
 token = checkEnvVar(process.env.token, token);
 clientId = checkEnvVar(process.env.clientId, clientId);
 botOwnerId = checkEnvVar(process.env.botOwnerId, botOwnerId);
-token = checkEnvVar(process.env.token, token);
 
 
 
-console.log(`Environment Variable: ${process.env.token}`);
-console.log(`Used Variable: ${token}`);
+console.log(`Token Environment Variable: ${process.env.token}`); b
+console.log(`Used Token: ${token}`);
+
+console.log(`clientId Environment Variable: ${process.env.clientId}`); b
+console.log(`Used clientId: ${clientId}`);
+
+console.log(`botOwnerId Environment Variable: ${process.env.botOwnerId}`); b
+console.log(`Used botOwnerId: ${botOwnerId}`);
