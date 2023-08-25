@@ -14,7 +14,7 @@ COPY package*.json ./
 RUN npm install
 
 #Set the discord bot token.
-ENV token="PLACEHOLDER"
+ENV token="PLACEHOLDER" clientId="PLACEHOLDER" botOwnerId="PLACEHOLDER"
 
 # Copy source code into the container
 COPY . .
