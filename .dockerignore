@@ -4,7 +4,6 @@ config.env
 
 #Development Artifacts
 .eslintrc.json
-config.json.template
 TODO.md
 
 

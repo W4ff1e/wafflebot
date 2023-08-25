@@ -38,7 +38,14 @@ Dev Build: ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/w
 
 ------------
 
-# How to run?
+# New way to run:
+1. Download and install Docker
+2. Start the container as follows:
+```
+docker run -e "token={ENTERYOURDISCORDTOKENHERE}" w4ff1e/wafflebot:latest
+```
+
+# Legacy Run Method:
 
 1. Download and install Docker
 2. Copy the config.json.template & rename it to config.json
@@ -48,6 +55,7 @@ Dev Build: ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/w
 docker run --mount type=bind,source={ABSOLUTE PATH TO CONFIG}\config.json,target=/app/config.json w4ff1e/wafflebot:latest
 ```
 
+# 
 
 # [ProjectWaffle.net](https://ProjectWaffle.net "ProjectWaffle.net")
 - [ ] User Accounts
